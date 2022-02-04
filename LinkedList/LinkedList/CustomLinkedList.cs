@@ -90,7 +90,7 @@ namespace LinkedList
                 {
                     if (pos == 2)
                     {
-                        Console.WriteLine(" insertion performed between two nodes");
+                        Console.WriteLine(" insertion performed between tow nodes");
                         newNode.next = temp.next;
                         temp.next = newNode;
                         break;
@@ -102,6 +102,21 @@ namespace LinkedList
 
             }
         }
+        //Deleting first element
+        //Deleting the first node
+        public Node DeleteFirst()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
+        }
+
+
+
+
         //Display the nodes
         public void Display()
         {
@@ -120,11 +135,13 @@ namespace LinkedList
                     temp = temp.next;
                 }
 
-
             }
         }
     }
 }
+
+    
+
 
   
 
