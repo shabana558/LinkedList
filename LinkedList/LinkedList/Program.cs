@@ -20,6 +20,7 @@ namespace LinkedList
             Console.WriteLine("**********6.Searching the Element***********");
             Console.WriteLine("***********7.insert and search the element*****");
             Console.WriteLine("***********8.insert and delete the element*****");
+            Console.WriteLine("***********9.sorting the element*****");
 
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -78,7 +79,15 @@ namespace LinkedList
                     obj.InsertLast(30);
                     obj.InsertLast(40);
                     obj.InsertLast(70);
-                    obj.DeleteInBetween(40);
+                  //  obj.DeleteInBetween(40);
+                    obj.Display();
+                    break;
+                case 9:
+                    obj.InsertLast(56);
+                    obj.InsertLast(30);
+                    obj.InsertLast(40);
+                    obj.InsertLast(70);
+                    obj.Sort();
                     obj.Display();
                     break;
 

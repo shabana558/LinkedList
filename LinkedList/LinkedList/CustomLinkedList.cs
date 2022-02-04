@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace LinkedList
 {
     internal class CustomLinkedList
-    {//Creating a head node to point the first element
+    {
+
+        //Creating a head node to point the first element
         public Node head;
         //Creating a method to insert last 
 
@@ -160,26 +162,6 @@ namespace LinkedList
             temp.next = newNode;
             return (newNode.data);
 
-        }
-        //search and delete
-        public int DeleteInBetween(int data)
-        {
-            Node temp = Search(data);
-            Console.WriteLine("Data {0} has been deleted from linked list", temp.data);
-            temp.next = temp.next.next;
-            int sizeofList = Size();
-            return sizeofList;
-        }
-        public int Size()
-        {
-            int count = 0;
-            Node temp = this.head;
-            while (temp != null)
-            {
-                count++;
-                temp = temp.next;
-            }
-            return count;
         }
         //sorting
         public void Sort()
