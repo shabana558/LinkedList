@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace LinkedList
 {
     internal class CustomLinkedList
-    {
-        //Creating a head node to point the first element
+    { //Creating a head node to point the first element
         public Node head;
         //Creating a method to insert last 
 
@@ -43,28 +42,42 @@ namespace LinkedList
             }
             return temp;
         }
-
-        //Display the nodes
-        public void Display()
+        //Appending a new node
+        public void Append(int new_data)
         {
-            Console.WriteLine("**********Displaying Nodes************");
-            Node temp = this.head;
-            if (temp == null)
+            Node new_node = new Node(new_data);
+            new_node.data = new_data;//assign data element
+            new_node.next = null;//assign null to next of new node
+            //check linkedlist empty 
+            if (head == null)
             {
-                Console.WriteLine("Linked List is Empty");
-                return;
+                head = new_node;
+
             }
             else
             {
-                while (temp != null)
+                //traverse to last node
+                Node temp = new Node(new_data);
+                temp = head;
+                while (temp.next != null)
                 {
-                    Console.WriteLine(" " + temp.data + " ");
                     temp = temp.next;
                 }
+                temp.next = new_node;
             }
+
+
         }
     }
 }
-    
+  
+
+
+       
+
+
+
+
+
 
 

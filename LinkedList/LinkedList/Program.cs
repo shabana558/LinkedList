@@ -10,15 +10,17 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
+
             //UseCase 1
-           CustomLinkedList obj = new CustomLinkedList();
+            CustomLinkedList obj = new CustomLinkedList();
             //Insertion Operation
-            obj.InsertFront(56);
-            obj.InsertFront(30);
-            obj.InsertFront(70);
+            obj.Append(56);
+            obj.Append(30);
+            obj.Append(70);
             //Display Operation
-            Console.WriteLine("*****Insertion at First*****");
+            Console.WriteLine("*****Appending*****");
             obj.Display();
+
         }
     }
 }
